@@ -1,0 +1,265 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --white: #f8f7f2;
+    --green: #31463b;
+    --green2: #435b4e;
+    --gold: #c8a96b;
+    --brown: #6a4b35;
+}
+
+body {
+    font-family: 'Inter',sans-serif;
+    background: var(--white);
+    color: #222;
+}
+
+h1, h2, h3 {
+    font-family: 'Cormorant Garamond',serif;
+    font-weight: 600;
+}
+
+nav {
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    position: sticky;
+    top: 0;
+}
+
+    nav a {
+        text-decoration: none;
+        color: var(--green);
+        margin-left: 25px;
+    }
+
+.hero {
+    min-height: 90vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+}
+
+.hero-text {
+    background-color: #b7b8b3;
+    color: #423933;
+    padding: 100px 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+    .hero-text span {
+        color: #222;
+        margin-bottom: 15px;
+    }
+
+    .hero-text h1 {
+        font-size: 70px;
+        line-height: 1;
+        margin-bottom: 20px;
+    }
+
+    .hero-text p {
+        max-width: 500px;
+        color: #354249e4;
+    }
+
+.hero-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.buttons {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+
+}
+.dark:hover {
+    box-shadow: 0px 8px 15px #423933; /* desplazamiento, desenfoque y color en peticion de oracion jj */
+}
+
+.gold:hover {
+    box-shadow: 0px 8px 15px #423933; /* desplazamiento, desenfoque y color en vr horarios */
+}
+.btn {
+    padding: 14px 25px;
+    text-decoration: none;
+    border-radius: 50px;
+}
+
+.gold {
+    background: #ffffff;
+    color: #423933;
+}
+
+.dark {
+    border: 2px solid rgba(255,255,255,.4);
+    color: #423933;
+}
+
+.barra-servicios {
+    background: #435b4e;
+    background: #423933;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    color: white;
+    font-weight: 500;
+}
+
+.about,
+.oracion {
+    padding: 100px 8%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+    .about img {
+        width: 100%;
+        border-radius: 20px;
+    }
+
+    .about span,
+    .schedule span,
+    .bautismos span,
+    .oracion span {
+        color: var(--brown);
+    }
+
+    .about h2,
+    .schedule h2,
+    .bautismos h2,
+    .oracion h2 {
+        font-size: 55px;
+        margin: 15px 0;
+        color: var(--green);
+    }
+
+    .about p {
+        color: #555;
+        margin-bottom: 20px;
+    }
+
+.schedule {
+    padding: 100px 8%;
+    background: #edf1ec;
+    text-align: center;
+}
+
+.cards {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 40px 20px;
+    border-radius: 20px;
+}
+
+    .card h3 {
+        color: var(--green);
+        margin-bottom: 10px;
+    }
+
+.bautismos {
+    padding: 100px 8%;
+}
+
+.gallery {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+
+    .gallery img {
+        width: 100%;
+        height: 350px;
+        object-fit: cover;
+        border-radius: 20px;
+    }
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input,
+textarea {
+    padding: 16px;
+    border: none;
+    background: #edf1ec;
+    border-radius: 15px;
+    outline: none;
+}
+
+textarea {
+    height: 140px;
+    resize: none;
+}
+
+button {
+    background: var(--green);
+    color: white;
+    border: none;
+    padding: 16px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+footer {
+    background: var(--green);
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+    footer h3 {
+        margin-bottom: 15px;
+    }
+
+    footer p {
+        margin-bottom: 15px;
+        color: #ddd;
+    }
+
+@media(max-width:900px) {
+
+    .hero,
+    .about,
+    .oracion,
+    .cards,
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+        .hero-text h1,
+        .about h2,
+        .schedule h2,
+        .bautismos h2,
+        .oracion h2 {
+            font-size: 45px;
+        }
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
